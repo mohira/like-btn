@@ -3,6 +3,7 @@
 
 <% if current_user.is_author?(@post) %>
   <%= link_to '記事を編集する', edit_post_path(@post) %>
+  <%= link_to '記事を削除する', post_path(@post), method: :delete %>
 <% end %>
 
 <h3>本文</h3>
