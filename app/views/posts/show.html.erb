@@ -5,6 +5,11 @@
 <p><%= @post.body %></p>
 
 <%= form_for [@post, @like] do |f| %>
+  <% if @like.errors.any? %>
+    <% @like.errors.full_messages.each do |msg| %>
+      <li style="color: red;"><%= msg %></li>
+    <% end %>
+  <% end %>
   <%= f.submit 'いいね！' %>
 <% end %>
 
