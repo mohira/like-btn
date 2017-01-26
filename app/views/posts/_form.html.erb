@@ -1,0 +1,18 @@
+<%= form_for @post do |f| %>
+  <% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
+  <div>
+    <%= f.label :title, '記事タイトル' %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :body, '記事本文' %>
+    <%= f.text_area :body %>
+  </div>
+
+  <%= f.submit  %>
+<% end %>

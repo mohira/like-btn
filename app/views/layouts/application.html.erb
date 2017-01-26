@@ -13,6 +13,7 @@
       <% if current_user %>
         <%= current_user.email %>さんとしてログインしています
         <%= link_to 'ログアウトする', destroy_user_session_path, method: :delete %>
+        <%= link_to '新規記事投稿', new_post_path %>
       <% else %>
         <%= link_to 'ログインはこちら', user_session_path %>
       <% end %>
