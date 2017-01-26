@@ -10,5 +10,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @like = Like.new()
   end
 end
