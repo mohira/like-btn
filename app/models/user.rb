@@ -11,4 +11,8 @@ class User < ApplicationRecord
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)
   end
+
+  def is_author?(post)
+    self.posts.exists?(id: post.id)
+  end
 end

@@ -1,6 +1,10 @@
 <h1>タイトル: <%= @post.title %></h1>
 <h2>投稿者: <%= @post.user.email %>さん</h2>
 
+<% if current_user.is_author?(@post) %>
+  <%= link_to '記事を編集する', edit_post_path(@post) %>
+<% end %>
+
 <h3>本文</h3>
 <p><%= @post.body %></p>
 

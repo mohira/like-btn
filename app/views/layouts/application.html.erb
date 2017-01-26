@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <% flash.each do |key, value| %>
+      <p style="color: red;"><%= value %></p>
+    <% end %>
     <header>
       <% if current_user %>
         <%= current_user.email %>さんとしてログインしています
