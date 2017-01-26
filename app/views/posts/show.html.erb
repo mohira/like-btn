@@ -4,6 +4,8 @@
 <h3>本文</h3>
 <p><%= @post.body %></p>
 
+<h3>いいね件数: <%= @post.likes.count %></h3>
+
 <% if current_user.already_liked?(@post) %>
   <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
 <% else %>
