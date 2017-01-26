@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :posts
   end
 
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show] do
+    resources :likes, only: [:create, :destroy]
+  end
 
   root 'posts#index'
 end
