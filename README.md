@@ -1,24 +1,20 @@
 # README
+- 簡単ないいねボタンを実装したものです
+- 詳しくは下記の解説記事をどうぞ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 解説記事
+- [【Rails】いいねボタンを作ろう part1/2](http://qiita.com/mohira/items/9ae35773e6209adbf0a0)
+- [【Rails】いいねボタンを作ろう part2/2](http://qiita.com/mohira/items/148c0f6ef89e8f62df72)
 
-Things you may want to cover:
+## Versions
+- Ruby 2.3.0
+- Ruby on Rails 5.0.1
 
-* Ruby version
+## Getting Started
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+$ git clone https://github.com/mohira/like-btn
+$ cd like-btn
+$ rails db:migrate
+$ rails db:seed
+```
