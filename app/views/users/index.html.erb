@@ -1,0 +1,5 @@
+<h1>ユーザー一覧</h1>
+
+<% @users.each do |user| %>
+  <li><%= link_to user.email, user_posts_path(user) %></li>
+<% end %>

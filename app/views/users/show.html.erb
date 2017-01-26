@@ -1,0 +1,4 @@
+<h1>ユーザー詳細</h1>
+
+メールアドレス: <%= @user.email %>さん
+<%= link_to "#{@user.email}の記事一覧へ", user_posts_path(@user) %>
