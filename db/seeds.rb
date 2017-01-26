@@ -15,5 +15,7 @@ Post.delete_all
       body: "body#{j} by #{user.email}",
       user_id: user.id
     )
+
+    Like.create(post_id: i, user_id: j)
   end
 end
