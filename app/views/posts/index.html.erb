@@ -1,0 +1,9 @@
+<% if @user.present? %>
+  <h1><%= @user.email %>さんの記事一覧</h1>
+<% else %>
+  <h1>全ユーザーの記事一覧</h1>
+<% end %>
+
+<% @posts.each do |post| %>
+  <li>タイトル: <%= link_to post.title, post %></li>
+<% end %>
