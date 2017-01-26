@@ -6,4 +6,11 @@ class Post < ApplicationRecord
 
   # このような書き方もできる(post.user_infoでアクセス)
   # belongs_to :user_info, class_name: :User, foreign_key: :user_id
+
+  # 1の関係
+  has_many :likes
+
+  # 2の関係
+  has_many :liked_users, through: :likes, source: :user
+
 end
