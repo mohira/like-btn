@@ -7,3 +7,8 @@
 <%= form_for [@post, @like] do |f| %>
   <%= f.submit 'いいね！' %>
 <% end %>
+
+<h2>この記事にいいねしたユーザー</h2>
+<% @post.liked_users.each do |user| %>
+  <li><%= user.email %></li>
+<% end %>
